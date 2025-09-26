@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: turistdata_app
+    env_file:
+      - .env  # <-- Carga automáticamente las variables desde .env
+    environment:
+      - PYTHONUNBUFFERED=1  # esto sí puedes dejarlo fijo
+      - GEOAPIFY_API_KEY=121b5b5c7f534ce08d3d29e34e303420
+    command: python app.py
+    ports:
+      - "8000:8000"
