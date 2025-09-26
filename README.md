@@ -103,4 +103,6 @@ Esto garantiza que:
 
 - El estado de la base de datos esté sincronizado con la versión actual del código.
 
-- Si el framework soporta migraciones (ej. Django, Rails, Laravel, Sequelize, Prisma), el comando correspondiente se corre directamente dentro del contenedor usando:
+- el comando correspondiente se corre directamente dentro del contenedor usando:
+
+`docker exec mi-app <comando-de-migraciones>`
